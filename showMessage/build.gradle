@@ -34,3 +34,21 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
+apply plugin: 'com.novoda.bintray-release'
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+def bintrayUserVal = properties.getProperty('bintrayUser')
+def bintrayKeyVal = properties.getProperty('bintray')
+
+publish{
+    userOrg = 'interneted'  //jcenter的用户名
+    groupId = 'com.interneted.showMessage'    //组织id
+    artifactId = 'showMessage'    //libName
+    publishVersion = '0.1'        //libVersion
+    desc = 'show message'//lib desc
+    website = 'https://github.com/InternetED/TestPushProject' //lib的地址
+    bintrayUser = bintrayUserVal //上面task中读取到的jcenterName
+    bintrayKey = bintrayKeyVal //上面task中读取到的apiKey
+    dryRun = false
+}
