@@ -1,0 +1,3 @@
+rootProject.name='TestPushProject'
+include ':app'
+include ':showMessage'
