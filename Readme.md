@@ -8,34 +8,34 @@ title: 如何發布至 Jcenter 倉庫？
 
 註冊 [Bintray](https://bintray.com/signup) 帳號
 
+建議使用 GitHub 註冊，再填寫郵箱等基本資料即可登入
+
 
 ![](https://i.imgur.com/27Q2eRI.png)
 
 
-建議使用 GitHub 註冊，再填寫郵箱等基本資料即可登入
-
-![](https://i.imgur.com/aNpxco2.png)
-
-
 選擇 『Add New Repository』，添加一個新的倉庫
 
-![](https://i.imgur.com/gJF1aPF.png)
+![](https://i.imgur.com/aNpxco2.png)
 
 - Name：maven
 - Type：Maven
 
+![](https://i.imgur.com/gJF1aPF.png)
 
-![](https://i.imgur.com/tX2SOPF.png)
 
 
 選擇『Add New Package』創建一個包
 
-![](https://i.imgur.com/qJLgJ6w.png)
+![](https://i.imgur.com/tX2SOPF.png)
+
 
 - Name：項目的名稱
 - Description：項目的描述
 - Licenses：項目的許可證
 - Version control：GitHub 的開源地址
+
+![](https://i.imgur.com/qJLgJ6w.png)
 
 
 進入『Edit Your Profile』，選擇『API Key』
@@ -44,12 +44,12 @@ title: 如何發布至 Jcenter 倉庫？
 
 將 API Key 填入 local.properties內
 
-![](https://i.imgur.com/chwg4YL.png)
-
 - bintray：API Key
 - bintrayUser：User Name
 
-此文件是存放本地的目錄，由於它的特性不會被傳至遠端倉庫，放此可防止不小心上傳自己的 Key
+> 此文件是存放本地的目錄，由於它的特性不會被傳至遠端倉庫，放此可防止不小心上傳自己的 Key
+
+![](https://i.imgur.com/chwg4YL.png)
 
 
 開啟根目錄下的 build.gradle
